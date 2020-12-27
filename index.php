@@ -26,7 +26,19 @@
             echo "<p> ".$key."</p>";
           }
         }
-          
+        
+        // $amount = 800;
+        // $taxRate = 0.0825;
+        // $addedTax = $amount * $taxRate;
+        // echo $addedTax;
+
+        function tax_calc($amount,$tax){
+          $calcTax = $amount * $tax;
+          $amount = round($amount+$calcTax,2);
+          return $amount;
+        }
+
+        echo tax_calc(750,0.223);
     ?>
   </body>
 </html>
